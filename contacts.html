@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me -Jomarie L. Pogoy</title>
+  
+
+  <link rel="stylesheet" href="style.css">
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("d2qtMLP2W8dQh0WOk");
+    })();
+  </script>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-link highlight"  href="index.html">Introductions</a> |
+    <a class="nav-link highlight" href="about.html">About Me</a> |
+    <a class="nav-link highlight" href="hobbies.html">My Hobbies</a> |
+    <a class="nav-link highlight" href="favorites.html">My Favorites</a> |
+    <a class="nav-link highlight" href="goals.html">My Goals</a> |
+    <a class="nav-link highlight" href="contact.html">Contact Me</a> |
+  </nav>
+
+
+  <h1 id="main-header">Contact Me</h1>
+  <hr>
+
+
+  <div id="about-section">
+    <p class="section-title profile-info">Please fill out the form below to send me a message.</p>
+  </div>
+
+  <form id="contact-form">
+
+
+    <label for="name" class="section-title">Full Name:</label><br>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+    <br><br>
+
+
+    <label for="email" class="section-title">Gmail:</label><br>
+    <input type="email" id="email" name="email" placeholder="Enter your Gmail" required>
+
+    <br><br>
+
+
+    <label class="section-title">Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="Male" required>
+    <label for="male">Male</label>
+
+    <input type="radio" id="female" name="gender" value="Female">
+    <label for="female">Female</label>
+
+    <input type="radio" id="gay" name="gender" value="Gay">
+    <label for="gay">Gay</label>
+
+    <input type="radio" id="lesbian" name="gender" value="Lesbian">
+    <label for="lesbian">Lesbian</label>
+
+    <input type="radio" id="other" name="gender" value="Other">
+    <label for="other">Other</label>
+
+    <br><br>
+
+
+    <label class="section-title">Skills:</label><br>
+    <input type="checkbox" id="html" name="skills" value="HTML">
+    <label for="html">HTML</label>
+
+    <input type="checkbox" id="css" name="skills" value="CSS">
+    <label for="css">CSS</label>
+
+    <input type="checkbox" id="js" name="skills" value="JavaScript">
+    <label for="js">JavaScript</label>
+
+    <br><br>
+
+
+    <label for="strand" class="section-title">Strand:</label><br>
+    <select id="strand" name="strand" required>
+      <option value="">Select Strand</option>
+      <option value="ICT">ICT</option>
+      <option value="STEM">STEM</option>
+      <option value="ABM">ABM</option>
+      <option value="GAS">GAS</option>
+      <option value="HUMSS">HUMSS</option>
+    </select>
+
+    <br><br>
+
+
+    <label for="message" class="section-title">Message:</label><br>
+    <textarea id="message" name="message" rows="5" cols="50" placeholder="Type your message here..." required></textarea>
+
+    <br><br>
+
+    <button type="submit">Send Message</button>
+    <button type="reset">Clear Form</button>
+
+  </form>
+
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm(
+        "service_pjh0uuc",
+        "template_hwwchig",
+        this
+      )
+      .then(function() {
+        alert("Message sent successfully!");
+        document.getElementById("contact-form").reset();
+      })
+      .catch(function(error) {
+        alert("Message failed to send. Please try again.");
+        console.error("EmailJS Error:", error);
+      });
+    });
+  </script>
+
+</body>
+</html>
