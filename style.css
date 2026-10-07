@@ -1,32 +1,124 @@
+
 body {
-    color: black;
+  font-family: Arial, sans-serif;
+  background-color: #f4f7f6;
+  color: #333333;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
+  color: #1a252f;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+nav ul {
+  list-style: none;
+  background-color: #2c3e50;
+  padding: 15px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+
+#main-header {
+  color: #0d47a1;
+  margin-bottom: 10px;
+}
+
+#contact-form {
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact {
+  padding: 10px;
+}
+
+
+
+.profile-section {
+  text-align: center;
+  margin-top: 20px;
 }
 
 .profile-info {
-    color: blue;
+  font-size: 16px;
+  color: #555555;
 }
+
 
 .section-title {
-    font-weight: bold;
+  display: block;
+  margin-bottom: 6px;
+  color: #2c3e50;
 }
 
-.nav-link{
-    text-align: center;
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
 }
 
-.highlight {
-    background-color:blue;
-    font-weight: bold;
+.radio-group, .checkbox-group {
+  display: flex;
+  gap: 15px;
+  align-items: center;
 }
 
-#main-header {
-    text-align; center;
+.radio-group input, .checkbox-group input {
+  width: auto;
 }
 
-#about-section{
-    background-color: lightgray;
+
+
+
+.btn {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #e0e0e0;
+  font-size: 14px;
+}
+
+
+  background-color: #0d47a1;
+  color: #ffffff;
+  border: none;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 20px;
 }
